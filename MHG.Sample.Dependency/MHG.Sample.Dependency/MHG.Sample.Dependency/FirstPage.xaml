@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Dependency.FirstPage">
+  <!--Order ile Primary seçilirse eğer toolbar'da alan varsa toolbarda gösterilir ama secondary seçilrise açılır menüde gösterilir.-->
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Ekle" Order="Secondary" Priority="1" Clicked="MenuItem_OnClicked"></ToolbarItem>
+  </ContentPage.ToolbarItems>
+    
+  <ContentPage.Content>
+    <StackLayout>
+      <Label x:Name="Label" VerticalOptions="Center" HorizontalOptions="Center" />
+      <StackLayout>
+        <ListView x:Name="LwStudents" 
+                  ItemsSource="{Binding .}"
+                  IsRefreshing="False"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="LwStudents_OnRefreshing">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <TextCell Text="{Binding Name}" Detail="{Binding Surname}">
+                <TextCell.ContextActions>
+                  <MenuItem CommandParameter="{Binding ID}" Text="Sil" x:Name="MenuDelete" Clicked="MenuDelete_OnClicked"></MenuItem>
+                  <MenuItem CommandParameter="{Binding ID}" Text="Detay Göster" x:Name="MenuDetail" Clicked="MenuDetail_OnClicked"></MenuItem>
+                </TextCell.ContextActions>
+              </TextCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

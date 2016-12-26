@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "799588154489",
+    "firebase_url": "https://acikakademi-fe788.firebaseio.com",
+    "project_id": "acikakademi-fe788",
+    "storage_bucket": "acikakademi-fe788.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799588154489:android:d3022065712f2ba5",
+        "android_client_info": {
+          "package_name": "com.muratoner.net"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799588154489-161fdvbnkoa1f817m32859gb14ubvuqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Ww1jjPXVnrc6xayFyHKX6W7_9tiS9Hg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
