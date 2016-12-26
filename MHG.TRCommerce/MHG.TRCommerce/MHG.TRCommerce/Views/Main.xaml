@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.TRCommerce.Views.Main">
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand">
+      <StackLayout>
+        <Label x:Name="LblCategoryName"></Label>
+      </StackLayout>
+
+      <ListView x:Name="LvCategoryItems"
+                BackgroundColor="#455A64"
+                HasUnevenRows="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Spacing="0">
+                <StackLayout BackgroundColor="#455A64"
+                             HorizontalOptions="Fill"
+                             Orientation="Horizontal"
+                             Padding="20,10"
+                             Spacing="0">
+                  <StackLayout Orientation="Horizontal"
+                               HorizontalOptions="FillAndExpand">
+                    <Label Text="{Binding ProductName}"
+                           TextColor="#CFD8DC"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"></Label>
+                    <Label Text="{Binding Price}"
+                           TextColor="#CFD8DC"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"></Label>
+                    <Label Text="{ Binding  }"></Label>
+                  </StackLayout>
+                </StackLayout>
+                <StackLayout BackgroundColor="#607D8B"
+                             HeightRequest="1"></StackLayout>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
