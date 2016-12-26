@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.CustomFont.Main">
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+      <Label Text="{Binding Model.Text1}" FontSize="40" TextColor="#000000">
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>Lato-Regular</OnPlatform.iOS>
+            <OnPlatform.Android>LatoRegular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        </Label>
+      <Label Text="{Binding Model.Text2}" FontSize="40" TextColor="#000000">
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>Lato-Bold</OnPlatform.iOS>
+            <OnPlatform.Android>LatoBold</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+      </Label>
+      <Label Text="&#xf041;" FontFamily="FontAwesome" FontSize="75" TextColor="#000000" />
+      <Label Text="{Binding Model.Text3}" FontSize="40" TextColor="#000000">
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>Roboto-Bold</OnPlatform.iOS>
+            <OnPlatform.Android>RobotoBold</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+      </Label>
+      <Label Text="{Binding Model.Text4}" FontSize="40" TextColor="#000000">
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>Roboto-Regular</OnPlatform.iOS>
+            <OnPlatform.Android>RobotoRegular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+      </Label>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
