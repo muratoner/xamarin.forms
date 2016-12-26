@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Social.Views.TwitterPage">
+  <ContentPage.Content>
+    <StackLayout>
+      <Entry Placeholder="please entry #hashtag" x:Name="TxtHash"></Entry>
+      <Button Text="Get Hashtag List" Clicked="Button_OnClicked"></Button>
+      <Button Text="Get User Tweets" x:Name="BtnGetUserTweets" Clicked="BtnGetUserTweets_OnClicked"></Button>
+      <ListView ItemsSource="{ Binding . }">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ImageCell ImageSource="{Binding ProfilePicture}"
+                   Text="{Binding Name}"
+                       Detail="{ Binding Text }"></ImageCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="MHG.Sample.UsePlugins.CarouselViewPage">
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Açık Akdemi CarouselView" 
+             FontSize="Large"
+             TextColor="Black"
+             HorizontalOptions="Center"></Label>
+      <cv:CarouselView ItemsSource="{Binding}" x:Name="CarouselView">
+        <cv:CarouselView.ItemTemplate>
+          <DataTemplate>
+            <StackLayout>
+              <Label Text="{Binding Name}"></Label>
+            </StackLayout>
+          </DataTemplate>
+        </cv:CarouselView.ItemTemplate>
+      </cv:CarouselView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
