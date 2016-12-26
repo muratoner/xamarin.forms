@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Share.SharePlugin">
+  <ContentPage.Content>
+    <StackLayout>
+      <Entry x:Name="Url" Placeholder="Url" Text="http://www.google.com"></Entry>
+      <Entry x:Name="Title" Placeholder="Title" Text="Title"></Entry>
+      <Entry x:Name="Description" Placeholder="Description" Text="Description"></Entry>
+      <Button x:Name="Button" Clicked="Button_OnClicked" Text="Share"></Button>
+      <Button x:Name="Copy" Clicked="Copy_OnClicked" Text="Copy"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

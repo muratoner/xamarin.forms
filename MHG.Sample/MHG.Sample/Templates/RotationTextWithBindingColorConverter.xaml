@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:MHG.Sample.Model;assembly=MHG.Sample"
+             x:Class="MHG.Sample.Templates.RotationTextWithBindingColorConverter">
+  <StackLayout>
+    <StackLayout.Resources>
+      <ResourceDictionary>
+        <converter:BoolToColorConverter x:Key="BoolToColorConverter" 
+                                    FalseColor="Red" 
+                                    TrueColor="Green"></converter:BoolToColorConverter>
+
+        <converter:BoolToTextConverter x:Key="BoolToTextConverter"
+                                       FalseText="Turned off"
+                                       TrueText="Turned on"></converter:BoolToTextConverter>
+      </ResourceDictionary>
+    </StackLayout.Resources>
+    
+    <Label Text="EVOLVE 2016" 
+           FontSize="Large" 
+           FontAttributes="Bold" 
+           HorizontalOptions="Center" 
+           VerticalOptions="CenterAndExpand" 
+           TextColor="{ Binding Source={ x:Reference  Switch}, Path=IsToggled, Converter={ StaticResource BoolToColorConverter } }"></Label>
+    
+    <Switch x:Name="Switch" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"></Switch>
+    
+    <Label Text="{Binding Source={ x:Reference Switch }, Path=IsToggled, Converter={ StaticResource BoolToTextConverter } }" 
+           VerticalOptions="CenterAndExpand" HorizontalOptions="Center"
+           FontSize="Medium" 
+           FontAttributes="Bold"></Label>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:btc="clr-namespace:MHG.Sample.Model;assembly=MHG.Sample"
+             x:Class="MHG.Sample.Templates.RotationTextWithBinding">
+  <StackLayout>
+    <Label Text="EVOLVE 2016"
+           Rotation="{Binding Source={ x:Reference slider }, Path=Value, Mode=TwoWay }"
+           FontSize="Large"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"></Label>
+    
+    <Slider x:Name="slider"
+            Minimum="-360"
+            Maximum="360"></Slider>
+    
+    <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='Rotation = {0:F2} degrees.'}"
+           FontSize="Medium"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"></Label>
+  </StackLayout>
+</ContentPage>

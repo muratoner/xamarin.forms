@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.MessagingCenter">
+  <ContentPage.Content>
+    <StackLayout>
+      <Entry x:Name="TxtText" Placeholder="Text Girin"></Entry>
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="BtnSubscribe" Text="Subscribe" Clicked="BtnSubscribe_OnClicked"></Button>
+        <Button x:Name="BtnUnSubscribe" Text="UnSubscribe" Clicked="BtnUnSubscribe_OnClicked"></Button>
+        <Button x:Name="BtnSend" Text="Send" Clicked="BtnSend_OnClicked"></Button>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

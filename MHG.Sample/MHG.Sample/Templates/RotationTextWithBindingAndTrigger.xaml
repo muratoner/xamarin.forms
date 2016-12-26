@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.RotationTextWithBindingAndTrigger">
+  <StackLayout>
+    <Label Text="EVOLVE 2016"
+         HorizontalOptions="Center"
+         FontAttributes="Bold"
+         VerticalOptions="CenterAndExpand"
+         FontSize="Large"
+         TextColor="Red">
+      <Label.Triggers>
+        <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference Switch}, Path=IsToggled}"
+                     Value="True">
+          <Setter Property="TextColor" Value="Green"></Setter>
+        </DataTrigger>
+      </Label.Triggers>
+    </Label>
+
+    <Switch x:Name="Switch"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"></Switch>
+
+    <Label HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           Text="Turned Off">
+      <Label.Triggers>
+        <DataTrigger TargetType="Label"
+                     Binding="{ Binding Source={ x:Reference Switch }, Path=IsToggled}"
+                     Value="True">
+          <Setter Property="Text" Value="Turned On"></Setter>
+        </DataTrigger>
+      </Label.Triggers>
+    </Label>
+  </StackLayout>
+</ContentPage>

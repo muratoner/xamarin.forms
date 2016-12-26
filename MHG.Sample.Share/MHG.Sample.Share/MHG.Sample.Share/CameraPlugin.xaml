@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:CrossVideoPlayer.FormsPlugin.Abstractions;assembly=MHG.Sample.Share"
+             x:Class="MHG.Sample.Share.CameraPlugin">
+  <ContentPage.Content>
+    <StackLayout>
+      <Button x:Name="BtnTakePicture" Text="Take Picture" Clicked="BtnTakePicture_OnClicked"></Button>
+      <Button x:Name="BtnPickPhoto" Text="Pick Photo" Clicked="BtnPickPhoto_OnClicked"></Button>
+      <Button x:Name="BtnTakeVideo" Text="Take Video" Clicked="BtnTakeVideo_OnClicked"></Button>
+      <Button x:Name="BtnPickVideo" Text="Pick Video" Clicked="BtnPickVideo_OnClicked"></Button>
+      <Image x:Name="ImageResult"></Image>
+      <video:CrossVideoPlayerView x:Name="CrossVideoPlayerView" VideoSource="http://video.ch9.ms/ch9/f7af/9b0d2a52-87b4-4ff9-8ce1-ded03bf5f7af/HowToAuthorCustomArtifacts.mp4"></video:CrossVideoPlayerView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.SpecialPage">
+  
+  <ContentPage.Content>
+    <TableView Intent="Form" HasUnevenRows="True">
+      <TableRoot>
+        <TableSection Title="Açık Akademi">
+          <SwitchCell Text="Xamarin" On="True"></SwitchCell>
+          <EntryCell Label="İnternet Adresiniz" LabelColor="Red" Placeholder="Lütfen internet adresi giriniz." Keyboard="Url"></EntryCell>
+          <ImageCell ImageSource="logo.png" Text="Açık Akademi" Detail="Xamarin Eğitimleri 2. Hafta"></ImageCell>
+          <TextCell Text="Açık Akademi" TextColor="Red" Detail="Xamarin Eğitimleri 2.Hafta" DetailColor="Aqua"></TextCell>
+          <ViewCell View=""></ViewCell>
+        </TableSection>
+      </TableRoot>
+    </TableView>
+  </ContentPage.Content>
+
+  <!--SwitchCell'de Text özelliği var fakat Switch'de yok. Ayrıca istoggled switchcell'de on attribute'üne denk geliyor.-->
+  <!--<Switch IsToggled="True"></Switch>-->
+
+  <!--ImageCell'de text özelliği var böylelikle label otomatij oluşturuluyor-->
+  <!--<Image></Image>-->
+  
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.Master" Title="Master Page" BackgroundColor="White">
+  <StackLayout>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0,10,0,0">
+      <Image Source="logo.png"></Image>
+    </StackLayout>
+
+    <!--Padding Worked With Left, Top, Right, Bottom-->
+    <StackLayout Padding="10, 0, 0, 0" Spacing="10" VerticalOptions="CenterAndExpand">
+      <Label Text="Eğitimler"></Label>
+      <Label Text="Başarı Hikayeleri"></Label>
+      <Label Text="Açık Akademi TV"></Label>
+      <Label Text="İlk 10"></Label>
+      <Label Text="Soru-Cevap"></Label>
+    </StackLayout>
+
+    <StackLayout VerticalOptions="End" HorizontalOptions="Center">
+      <Label Text="www.acikakademi.com" HorizontalOptions="Center"></Label>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.DisableButtonWithTrigger">
+  <StackLayout>
+    <Entry x:Name="Entry" Text=""></Entry>
+    <Button x:Name="BtnSave"
+            IsEnabled="True"
+            Text="Save">
+      <Button.Triggers>
+        <DataTrigger TargetType="Button"
+                     Binding="{Binding Source={x:Reference Entry}, Path=Text.Length, Mode=TwoWay}"
+                     Value="0">
+          <Setter Property="IsEnabled" 
+                  Value="False"></Setter>
+        </DataTrigger>
+      </Button.Triggers>
+    </Button>
+  </StackLayout>
+</ContentPage>

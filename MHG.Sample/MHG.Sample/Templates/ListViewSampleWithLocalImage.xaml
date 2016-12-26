@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MHG.Sample.Model;assembly=MHG.Sample"
+             x:Class="MHG.Sample.Templates.ListViewSampleWithLocalImage">
+  
+  <ContentPage.Padding>
+    <OnPlatform  x:TypeArguments="Thickness" iOS="0,20,0,0" />
+  </ContentPage.Padding>
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:ImageSourceConverter x:Key="ImageSourceConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      <SearchBar x:Name="SearchBar" Placeholder="Sanal Sınıf Ara" TextChanged="SearchBar_OnTextChanged"></SearchBar>
+      <ListView x:Name="LstPeople" 
+                ItemsSource="{ Binding . }"
+                Footer="{ Binding Count, Source={ x:Static local:PersonFactory.People } }"
+                IsGroupingEnabled="True"
+                GroupDisplayBinding="{Binding Key}"
+                GroupShortNameBinding="{Binding Key}"
+                ItemSelected="LstPeople_OnItemSelected"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="False"
+                RowHeight="50"
+        Refreshing="LstPeople_OnRefreshing">
+        
+        <ListView.Header>
+          <ContentView Padding="0,5" BackgroundColor="#fff">
+            <Label FontSize="Medium" TextColor="#000" Text="Microsoft Açık Akademi Sanal Sınıflar" HorizontalOptions="Center" VerticalTextAlignment="Center"></Label>
+          </ContentView>
+        </ListView.Header>
+        
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ImageCell Text="{ Binding Fullname }" TextColor="Black" Detail="{ Binding Description }" DetailColor="Gray" ImageSource="{Binding ImageUrl, Converter={ StaticResource ImageSourceConverter }}">
+              <ImageCell.ContextActions>
+                <!--Eğer IsDestructive="True" değeri verilirse ilgili menuitem sadece ios'da kırmızı çıkacak-->
+                <MenuItem Text="Güncelle"></MenuItem>
+                <MenuItem Text="Sil" IsDestructive="True" Clicked="MenuItem_OnClicked" CommandParameter="{ Binding ID }"></MenuItem>
+              </ImageCell.ContextActions>
+            </ImageCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        <ListView.FooterTemplate>
+          <DataTemplate>
+            <ContentView Padding="0,5,5,0">
+              <Label FontSize="Medium"
+                     TextColor="#666"
+                     HorizontalOptions="Center"
+                     HorizontalTextAlignment="End"
+                     Text="{Binding ., StringFormat = '{0} sanal sınıf mevcut.' }"></Label>
+            </ContentView>
+          </DataTemplate>
+        </ListView.FooterTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>

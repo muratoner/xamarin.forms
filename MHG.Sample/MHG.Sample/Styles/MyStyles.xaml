@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Styles.MyStyles">
+
+  <ContentPage.Content>
+    <StackLayout Style="{DynamicResource DefaultBackground}">
+      <!--Birden fazla stili kullanmak için , ayracını kullanıyoruz.-->
+      <Label Text="Açık Akademi" Style="{ DynamicResource LabelStyle, LabelStyleBold }"></Label>
+      <Label Text="Test İlk" Style="{ DynamicResource LabelStyleBold }"></Label>
+      
+      <Label Style="{DynamicResource DefaultTitle}"></Label>
+      <Editor Style="{DynamicResource DefaultContent}"></Editor>
+      <Button Text="Tema Değiştir!" Style="{DynamicResource DefaultButton}" Clicked="Button_OnClicked"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>

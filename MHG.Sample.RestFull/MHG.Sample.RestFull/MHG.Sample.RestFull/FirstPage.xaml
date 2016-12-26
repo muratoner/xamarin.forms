@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.RestFull.FirstPage"
+             x:Name="Page">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Menü Load" Clicked="MenuItem_OnClicked"></ToolbarItem>
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="">
+      <Button Clicked="Button_OnClicked" Text="Acitivity Indicator"></Button>
+      <!--Sayfanın ortasında activity indicator çıkarıyor-->
+      <StackLayout HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding Source={ x:Reference Page }, Path=IsBusy}">
+        <Label Text="Loading Data..."></Label>
+        <ActivityIndicator x:Name="AcitivityIndicator" IsRunning="{Binding Source={x:Reference Page}, Path=IsBusy}"></ActivityIndicator>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="clr-namespace:MHG.Sample.Toolkit;assembly=MHG.Sample.Toolkit"
+             xmlns:font="clr-namespace:MHG.Sample.Controls;assembly=MHG.Sample"
+             x:Class="MHG.Sample.Templates.EntryAnimationWithTrigger">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Entry">
+        <Style.Triggers>
+          <EventTrigger Event="Focused">
+            <toolkit:ScaleAction Anchor="0, 0.5"
+                                  Scale="1.5"
+                                  Easing="SpringOut"></toolkit:ScaleAction>
+          </EventTrigger>
+          <EventTrigger Event="Unfocused">
+            <toolkit:ScaleAction Anchor="0, 0.5"
+                                 Scale="1"
+                                 Easing="SpringIn">
+            </toolkit:ScaleAction>
+          </EventTrigger>
+        </Style.Triggers>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <ContentPage.Content>
+    <StackLayout>
+      <Entry Placeholder="Name"></Entry>
+      <Entry Placeholder="Surname"></Entry>
+      <Entry Placeholder="Age"></Entry>
+    <font:FontAwesomeIcon x:Name="FontAwesomeIcon" FontSize="50" TextColor="Red"></font:FontAwesomeIcon>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

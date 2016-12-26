@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.ListViewSample"
+             xmlns:pv="clr-namespace:MHG.Sample.Model;assembly=MHG.Sample"
+             BackgroundImage="logo.png">
+  <ContentPage.BindingContext>
+    <pv:PersonViewModel />
+  </ContentPage.BindingContext>
+  
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+      <ListView x:Name="lwPeople" ItemsSource="{ Binding Persons }" ItemSelected="LwPeople_OnItemSelected">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding ID}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"></Label>
+                <Image Source="{ Binding ImageUrl }" HeightRequest="50"></Image>
+                <Label Text="{Binding Name}" VerticalTextAlignment="Center"></Label>
+                <Entry Text="{Binding Surname}" HorizontalTextAlignment="Start"></Entry>
+                <Button Clicked="Button_OnClicked" CommandParameter="{Binding ID}" HorizontalOptions="End" Text="Sil"></Button>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

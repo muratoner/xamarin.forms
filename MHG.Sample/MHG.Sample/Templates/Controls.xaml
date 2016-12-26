@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.Controls">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Button Text="Xamarin Açık Akademi" Clicked="Button_OnClicked"></Button>
+        <ActivityIndicator x:Name="Indicator" IsRunning="False" HorizontalOptions="Center" VerticalOptions="Center"></ActivityIndicator>
+        <DatePicker x:Name="DatePicker"></DatePicker>
+        <!--TextBox işlevi görmektedir.-->
+        <Entry FontAttributes="Bold"
+               FontFamily="Calibri"
+               FontSize="24"
+               HorizontalTextAlignment="Center"
+               Placeholder="Açık Akademi"
+               PlaceholderColor="Maroon"
+               TextColor="Aqua"
+               Keyboard="Numeric"
+               IsPassword="True"></Entry>
+
+        <!-- Eğer az element varsa listview'de o zaman RecycleElement seçilecek fakat çok fazla özel kontrol kullıldıysa RetailElement kullanılacak performans için.
+        <ListView CachingStrategy='RecycleElement' />-->
+
+        <!--Texbox işlevi görmektedir.-->
+        <Editor FontAttributes="Bold" TextColor="Fuchsia"></Editor>
+
+        <Picker SelectedIndexChanged="Picker_OnSelectedIndexChanged" x:Name="Picker">
+          <Picker.Items>
+            <x:String>1</x:String>
+            <x:String>2</x:String>
+          </Picker.Items>
+        </Picker>
+
+        <ProgressBar x:Name="Bar" Progress=".3"></ProgressBar>
+
+        <Slider x:Name="Slider" Minimum="0" Maximum="100" Value="50"></Slider>
+
+        <Label HorizontalOptions="Center" BindingContext="{x:Reference Slider}" Text="{ Binding Value, StringFormat = '{0:F0}' }"></Label>
+
+        <Stepper x:Name="Stepperm" Minimum="5" Maximum="100" Increment="5" ValueChanged="Stepperm_OnValueChanged"></Stepper>
+
+        <!--BindingContext ile Two-Way binding yönetimi kullanabiliyoruz ve 
+        x:Reference Switch tanımı ile hangi nesneyi bağlayabileceğimizi seçiyoruz x:Name ile 
+        ve kullanacağımız attirubute içinde { Binding OzellikAdi } şeklinde kullanabiliyoruz.-->
+        <Label x:Name="LabelStep" FontSize="Large" BindingContext="{ x:Reference Switch }" IsVisible="{ Binding IsToggled }" TextColor="Red" HorizontalTextAlignment="Center"></Label>
+
+        <Switch x:Name="Switch" IsToggled="True"></Switch>
+
+        <TimePicker x:Name="TimePicker" Format="hh:mm"></TimePicker>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

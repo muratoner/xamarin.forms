@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MHG.Sample.Templates.Detail" Title="Detail Page">
+  <ContentPage.Content>
+    <ScrollView>
+      <RelativeLayout x:Name="RelativeLayoutLogin">
+        <StackLayout x:Name="BackgroundLayout" Spacing="15" HorizontalOptions="Center" VerticalOptions="Start">
+          <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness" iOS="15, 38, 15, 15" Android="15, 18, 15, 15" WinPhone="15, 18, 15, 15" />
+          </StackLayout.Padding>
+          <StackLayout.Children>
+            <Image Source="logo.png" Aspect="AspectFit" HeightRequest="75"></Image>
+            <Image x:Name="BackgroundBox" Source="box_completo.png" Aspect="AspectFill"></Image>
+          </StackLayout.Children>
+        </StackLayout>
+
+        <StackLayout RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BackgroundLayout, Property=Y, Constant=111}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BackgroundLayout, Property=Width, Factor=1}">
+          <!--<StackLayout.Padding>
+          <OnPlatform x:TypeArguments="Thickness" iOS="15, 38, 15, 15" Android="15, 18, 15, 15" WinPhone="15, 18, 15, 15" />
+        </StackLayout.Padding>-->
+          <RelativeLayout>
+            <Image Source="input.png" x:Name="BgUsername"></Image>
+            <Image Source="input_selected.png" x:Name="SelectedBgUsername" IsVisible="False"></Image>
+            <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+                      RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-16}"
+                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-16}"
+                      Orientation="Horizontal">
+              <Image Source="ico_user.png" Scale="0.6"></Image>
+              <Entry x:Name="UsernameOrEmail" Placeholder="Nome de usuário" IsEnabled="True" HorizontalOptions="FillAndExpand" Text="" TextColor="Black"></Entry>
+            </StackLayout>
+          </RelativeLayout>
+          <RelativeLayout>
+            <Image Source="logo.png"></Image>
+            <StackLayout
+              RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+              RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-16}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=48}"
+              Orientation="Horizontal">
+              <Image Source="password.png" Scale="0.7"></Image>
+              <Entry x:Name="PasswordT" Placeholder="Senha" IsPassword="True" HorizontalOptions="FillAndExpand" Text="offspring"></Entry>
+            </StackLayout>
+          </RelativeLayout>
+          <!--<RelativeLayout Scale="0.85">
+          <Image Source="input.png" x:Name="BgUsername"></Image>
+          <Image Source="input_selected.png" x:Name="SelectedBgUsername" IsVisible="False"></Image>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="15, 5, 0, 0">
+            <Image Source="ico_user.png" Scale="0.6"></Image>
+            <Entry x:Name="UsernameOrEmail" Placeholder="Nome de usuário" IsEnabled="True" WidthRequest="300" HorizontalOptions="CenterAndExpand" Text="" TextColor="Black"></Entry>
+          </StackLayout>
+        </RelativeLayout>
+        <RelativeLayout Scale="0.85">
+          <Image Source="input.png" x:Name="BgPassword"></Image>
+          <Image Source="input_selected.png" x:Name="SelectedBgPassword" IsVisible="False"></Image>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10, 5, 0, 0">
+            <Image Source="ico_password.png" Scale="0.6"></Image>
+            <Entry x:Name="Password" Placeholder="Senha" IsPassword="True" HorizontalOptions="CenterAndExpand" WidthRequest="300" Text="" TextColor="Black"></Entry>
+          </StackLayout>
+        </RelativeLayout>-->
+        </StackLayout>
+      </RelativeLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

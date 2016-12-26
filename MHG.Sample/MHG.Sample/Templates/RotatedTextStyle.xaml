@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="clr-namespace:MHG.Sample.Toolkit;assembly=MHG.Sample.Toolkit"
+             x:Class="MHG.Sample.Templates.RotatedTextStyle">
+  <ContentPage.Content>
+    <Grid>
+      <Grid.Resources>
+        <ResourceDictionary>
+          <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="Text" Value="    EVOLVE"></Setter>
+            <Setter Property="FontSize" Value="32"></Setter>
+            <Setter Property="Grid.Column" Value="1"></Setter>
+            <Setter Property="VerticalOptions" Value="Center"></Setter>
+            <Setter Property="HorizontalOptions" Value="Start"></Setter>
+            <Setter Property="AnchorX" Value="0"></Setter>
+          </Style>
+        </ResourceDictionary>
+      </Grid.Resources>
+
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.0000, S=1, L=0.5}" Rotation="0"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.0625, S=1, L=0.5}" Rotation="22.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.1250, S=1, L=0.5}" Rotation="45"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.1875, S=1, L=0.5}" Rotation="67.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.2500, S=1, L=0.5}" Rotation="90"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.3125, S=1, L=0.5}" Rotation="112.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.3750, S=1, L=0.5}" Rotation="135"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.4375, S=1, L=0.5}" Rotation="157.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.5000, S=1, L=0.5}" Rotation="180"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.5625, S=1, L=0.5}" Rotation="202.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.6250, S=1, L=0.5}" Rotation="225"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.6785, S=1, L=0.5}" Rotation="246.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.7500, S=1, L=0.5}" Rotation="270"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.8125, S=1, L=0.5}" Rotation="292.5"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.8750, S=1, L=0.5}" Rotation="315"></Label>
+      <Label Style='{StaticResource LabelStyle}' TextColor="{toolkit:HslColor H=0.9375, S=1, L=0.5}" Rotation="337.5"></Label>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
