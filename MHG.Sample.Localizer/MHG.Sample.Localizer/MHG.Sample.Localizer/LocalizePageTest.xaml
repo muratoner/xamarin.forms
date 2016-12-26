@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18N="clr-namespace:MHG.Sample.Localizer.Localization;assembly=MHG.Sample.Localizer"
+             x:Class="MHG.Sample.Localizer.LocalizePageTest">
+  <ContentPage.Content>
+    <StackLayout>
+      <TableView Intent="Form">
+        <TableRoot>
+          <TableSection Title="{i18N:Translate Text=FormName}">
+            <EntryCell Text="{i18N:Translate Text=LabelName}"></EntryCell>
+            <EntryCell Text="{i18N:Translate Text=LabelSurname}"></EntryCell>
+            <EntryCell Text="{i18N:Translate Text=LabelPassword}"></EntryCell>
+            <ViewCell>
+              
+            <Button Text="{ i18N:Translate Text=ButtonSave }"></Button>
+            
+            </ViewCell>
+          </TableSection>
+        </TableRoot>
+      </TableView>
+      <Image>
+        <Image.Source>
+          <OnPlatform x:TypeArguments="ImageSource" iOS="flag.jpg" Android="flag.jpg" WinPhone="Assets/Images/flag.jpg" />
+        </Image.Source>
+      </Image>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
