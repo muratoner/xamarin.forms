@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26906.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.csproj", "{6E0E3925-717D-4E11-A2DB-5D29FCC2C318}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.csproj", "{6E0E3925-717D-4E11-A2DB-5D29FCC2C318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.Droid", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.Droid\MHG.Sample.SplashScreen.Droid.csproj", "{132A7961-DE94-4BC6-8465-B94F2EA12272}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.Droid", "MHG.Sample.SplashScreen.Droid\MHG.Sample.SplashScreen.Droid.csproj", "{132A7961-DE94-4BC6-8465-B94F2EA12272}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.iOS", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.iOS\MHG.Sample.SplashScreen.iOS.csproj", "{C29CC70A-E5DF-4D14-A78E-C2DE2EA6F58B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.iOS", "MHG.Sample.SplashScreen.iOS\MHG.Sample.SplashScreen.iOS.csproj", "{C29CC70A-E5DF-4D14-A78E-C2DE2EA6F58B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.WinPhone", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.WinPhone\MHG.Sample.SplashScreen.WinPhone.csproj", "{915866F3-43BE-4471-A116-55C104731574}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.WinPhone", "MHG.Sample.SplashScreen.WinPhone\MHG.Sample.SplashScreen.WinPhone.csproj", "{915866F3-43BE-4471-A116-55C104731574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.UWP", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.UWP\MHG.Sample.SplashScreen.UWP.csproj", "{613BFA52-207D-4A25-A3BA-3FF4E28FF3C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.UWP", "MHG.Sample.SplashScreen.UWP\MHG.Sample.SplashScreen.UWP.csproj", "{613BFA52-207D-4A25-A3BA-3FF4E28FF3C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.Windows", "MHG.Sample.SplashScreen\MHG.Sample.SplashScreen.Windows\MHG.Sample.SplashScreen.Windows.csproj", "{144E6709-BE35-4B83-861D-B9631F49B27D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHG.Sample.SplashScreen.Windows", "MHG.Sample.SplashScreen.Windows\MHG.Sample.SplashScreen.Windows.csproj", "{144E6709-BE35-4B83-861D-B9631F49B27D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -402,5 +402,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C56DD1F7-8BF0-47BC-86A9-C855C02B0781}
 	EndGlobalSection
 EndGlobal
